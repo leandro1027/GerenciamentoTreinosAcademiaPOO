@@ -1,11 +1,10 @@
 package com.example.demo.controllers.aluno;
 
-import com.example.demo.controllers.contato.TelaContatosController;
 import com.example.demo.entities.Aluno;
 import com.example.demo.services.AlunoService;
-import com.example.demo.telas.aluno.TelaAdicionarAluno;
-import com.example.demo.telas.aluno.TelaAtualizarAluno;
-import com.example.demo.telas.aluno.TelaVisualizarAluno;
+import com.example.demo.telas.exemplo.TelaAdicionarAluno;
+import com.example.demo.telas.exemplo.TelaAtualizarAluno;
+import com.example.demo.telas.exemplo.TelaVisualizarAluno;
 import com.example.demo.telas.contato.TelaContatosAluno;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;

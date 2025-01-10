@@ -1,20 +1,20 @@
-package com.example.demo.telas.contato;
+package com.example.demo.telas.exemplo;
 
 import com.example.demo.utils.AbridorJanela;
 import javafx.fxml.FXMLLoader;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TelaContatosAluno {
+public class TelaAtualizarAluno {
 
     AbridorJanela abridorJanela;
 
-    public TelaContatosAluno(AbridorJanela abridorJanela) {
+    public TelaAtualizarAluno(AbridorJanela abridorJanela) {
         this.abridorJanela = abridorJanela;
     }
 
     public void abrir(){
-        abridorJanela.abrirNovaJanela("/views/contato/tela-contatos-view.fxml", "Contatos do Aluno", 600, 500);
+        abridorJanela.abrirNovaJanela("/views/aluno/tela-atualizar-aluno-view.fxml", "Atualizar Alunos", 300, 300);
     }
 
     public FXMLLoader getXMLLoader(){

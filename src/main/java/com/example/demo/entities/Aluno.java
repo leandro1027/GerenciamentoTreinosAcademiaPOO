@@ -18,7 +18,6 @@ public class Aluno {
 
     private int idade;
 
-    @OneToMany(mappedBy = "aluno")
-    private List<Contato> contatos;
+
 
 }
