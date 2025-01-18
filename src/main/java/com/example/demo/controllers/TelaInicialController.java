@@ -7,15 +7,5 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class TelaInicialController {
 
-    private TelaAlunos telaAlunos;
-
-    public TelaInicialController(TelaAlunos telaAlunos) {
-        this.telaAlunos = telaAlunos;
-    }
-
-    @FXML
-    protected void onAlunosButtonClick() {
-        telaAlunos.abrir();
-    }
 
 }
