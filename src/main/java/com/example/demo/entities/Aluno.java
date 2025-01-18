@@ -1,6 +1,7 @@
 package com.example.demo.entities;
 
 import jakarta.persistence.*;
+import javafx.fxml.FXML;
 import lombok.*;
 
 import java.util.List;
@@ -12,10 +13,15 @@ public class Aluno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @FXML
     private String nome;
 
+    @FXML
     private String email;
 
+    @FXML
     private int idade;
 
-}
+
+   
+    }
