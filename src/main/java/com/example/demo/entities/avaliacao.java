@@ -8,12 +8,7 @@ import lombok.*;
 
 import java.util.Date;
 
-@Entity
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
+@Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
 public class avaliacao {
 
     @Id
