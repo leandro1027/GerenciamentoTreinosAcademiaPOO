@@ -1,9 +1,6 @@
 package com.example.demo.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
@@ -20,5 +17,9 @@ public class Avaliacao {
     private double nota;
 
     private String comentarios;
+
+    @ManyToOne
+    @JoinColumn(name = "aluno_id")
+    private Aluno aluno;
 
 }
