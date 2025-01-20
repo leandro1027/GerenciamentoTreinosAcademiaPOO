@@ -1,20 +1,20 @@
 package com.example.demo.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.metamodel.IdentifiableType;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
 
 @Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
-public class frequencia {
+public class Frequencia {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private Date datafrequencia;
+
+    @ManyToOne
+    @JoinColumn(name = "aluno_id")
+    private Aluno aluno;
 
 }
