@@ -4,17 +4,21 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.metamodel.IdentifiableType;
 import lombok.*;
 
 import java.util.Date;
 
 @Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
-public class frequencia {
+public class Avaliacao {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private Date datafrequencia;
+    private Date data;
+
+    private double nota;
+
+    private String comentarios;
 
 }

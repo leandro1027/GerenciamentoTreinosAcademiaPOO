@@ -9,16 +9,11 @@ import lombok.*;
 import java.util.Date;
 
 @Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
-public class avaliacao {
+public class Frequencia {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private Date data;
-
-    private double nota;
-
-    private String comentarios;
+    private Date datafrequencia;
 
 }

@@ -1,9 +1,10 @@
 package com.example.demo.entities;
 
 import jakarta.persistence.*;
-import javafx.fxml.FXML;
 import lombok.*;
 
+import javax.print.attribute.standard.Media;
+import java.nio.MappedByteBuffer;
 import java.util.List;
 
 @Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
@@ -13,15 +14,19 @@ public class Aluno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @FXML
     private String nome;
 
-    @FXML
     private String email;
 
-    @FXML
     private int idade;
 
+    @OneToMany(mappedBy = "aluno")
+    private List<Avaliacao> avaliacoes;
 
-   
+    @OneToMany(mappedBy = "aluno")
+    private List<Frequencia> frequencias;
+
+    @OneToMany(mappedBy = "aluno")
+    private List<Treino> treinos;
+
     }
