@@ -1,44 +1,44 @@
 package com.example.demo.controllers;
 
-import com.example.demo.telas.exemplo.TelaAlunos;
+import com.example.demo.telas.TelaTreinos;
 import javafx.fxml.FXML;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class TelaInicialController {
 
-    private TelaAlunos telaAlunos;
-    private TelaAlunos telaAdicionarAluno;
-    private TelaAlunos telaAtualizarAluno;
-    private TelaAlunos telaVisualizarAluno;
+    private TelaTreinos telaTreinos;
+    private TelaTreinos telaAdicionarTreino;
+    private TelaTreinos telaAtualizarTreino;
+    private TelaTreinos telaVisualizarTreino;
 
-    public TelaInicialController(TelaAlunos telaAlunos, TelaAlunos telaAdicionarAluno,
-                                 TelaAlunos telaAtualizarAluno, TelaAlunos telaVisualizarAluno) {
-        this.telaAlunos = telaAlunos;
-        this.telaAdicionarAluno = telaAdicionarAluno;
-        this.telaAtualizarAluno = telaAtualizarAluno;
-        this.telaVisualizarAluno = telaVisualizarAluno;
+    public TelaInicialController(TelaTreinos telaTreinos, TelaTreinos telaAdicionarTreino,
+                                 TelaTreinos telaAtualizarTreino, TelaTreinos telaVisualizarTreino) {
+        this.telaTreinos = telaTreinos;
+        this.telaAdicionarTreino = telaAdicionarTreino;
+        this.telaAtualizarTreino = telaAtualizarTreino;
+        this.telaVisualizarTreino = telaVisualizarTreino;
 
     }
 
     @FXML
-    protected void onAbrirAlunosButtonClick() {
-        telaAlunos.abrir();
+    protected void onAbrirTreinosButtonClick() {
+        telaTreinos.abrir();
     }
 
     @FXML
-    protected void onNovoAlunoButtonClick(){
-        telaAdicionarAluno.abrir();
+    protected void onNovoTreinoButtonClick(){
+        telaAdicionarTreino.abrir();
     }
 
     @FXML
-    protected void onExcluirAlunoButtonClick(){
-        telaAtualizarAluno.abrir();
+    protected void onExcluirTreinoButtonClick(){
+        telaAtualizarTreino.abrir();
     }
 
     @FXML
-    protected void onEditarAlunoButtonClick(){
-        telaVisualizarAluno.abrir();
+    protected void onEditarTreinoButtonClick(){
+        telaVisualizarTreino.abrir();
     }
 
 
