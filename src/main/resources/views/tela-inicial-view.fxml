@@ -11,4 +11,11 @@
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
   </padding>
 
+    <Label text="Academia" style="-fx-font-size: 20px;"/>
+
+    <Button text="Abrir Alunos" onAction="#onAbrirAlunosButtonClick"/>
+    <Button text="Novo Aluno" onAction="#onNovoAlunoButtonClick"/>
+    <Button text="Editar Aluno" onAction="#onEditarAlunoButtonClick"/>
+    <Button text="Excluir Aluno" onAction="#onExcluirAlunoButtonClick"/>
+
 </VBox>
