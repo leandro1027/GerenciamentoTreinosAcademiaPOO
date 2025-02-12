@@ -18,6 +18,14 @@ public class Treino {
 
     private int duracao;
 
+    private String exercicio;
+
+    private int Carga;
+
+    private int series;
+
+    private int repeticoes;
+
     @ManyToOne
     @JoinColumn(name = "aluno_id")
     private Aluno aluno;
