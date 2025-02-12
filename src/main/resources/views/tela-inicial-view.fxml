@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.example.demo.controllers.TelaInicialController">
+<AnchorPane prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.TelaInicialController">
 
     <MenuBar layoutY="0.0" prefHeight="25.0" prefWidth="300.0">
         <Menu text="Treinos">
@@ -14,19 +14,13 @@
         </Menu>
     </MenuBar>
 
+    <VBox alignment="CENTER" layoutX="0.0" layoutY="25.0" prefWidth="300.0" spacing="10.0">
+        <Label style="-fx-font-size: 20px;" text="Academia" />
 
+        <Button onAction="#onAbrirTreinosButtonClick" prefHeight="25.0" prefWidth="174.0" text="Visualizar dados do treino" />
+        <Button onAction="#onNovoTreinoButtonClick" prefHeight="25.0" prefWidth="174.0" text="Registrar dados do treino" />
+        <Button onAction="#onEditarTreinoButtonClick" prefHeight="25.0" prefWidth="174.0" text="Editar dados do treino" />
+        <Button onAction="#onExcluirTreinoButtonClick" prefHeight="25.0" prefWidth="174.0" text="Excluir treino" />
+    </VBox>
 
-<VBox alignment="CENTER" layoutX="0.0" layoutY="25.0" prefWidth="300.0" spacing="20.0">
-
-    <VBox alignment="CENTER" spacing="10" />
-</VBox>
-
-
-
-    <Label layoutX="107.0" layoutY="68.0" style="-fx-font-size: 20px;" text="Academia" />
-
-<Button layoutX="71.0" layoutY="146.0" onAction="#onAbrirTreinosButtonClick" prefHeight="25.0" prefWidth="174.0" text="Visualizar dados do treino" />
-<Button layoutX="71.0" layoutY="115.0" onAction="#onNovoTreinoButtonClick" prefHeight="25.0" prefWidth="174.0" text="Registrar dados do treino" />
-<Button layoutX="71.0" layoutY="178.0" onAction="#onEditarTreinoButtonClick" prefHeight="25.0" prefWidth="174.0" text="Editar dados do treino" />
-<Button layoutX="116.0" layoutY="215.0" onAction="#onExcluirTreinoButtonClick" text="Excluir treino" />
 </AnchorPane>
