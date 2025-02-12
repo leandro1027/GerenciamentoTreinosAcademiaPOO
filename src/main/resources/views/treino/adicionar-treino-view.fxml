@@ -29,6 +29,7 @@
         <VBox spacing="10.0">
             <!-- Card de Exercício 1 -->
             <HBox spacing="10.0" style="-fx-background-color: #FFF; -fx-padding: 10px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, gray, 5, 0, 2, 2);">
+                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" image="images/exercicio1.jpg" />
 
                 <VBox alignment="CENTER_LEFT">
                     <Label text="Supino Inclinado" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
