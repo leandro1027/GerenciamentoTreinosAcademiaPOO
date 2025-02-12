@@ -29,7 +29,10 @@
         <VBox spacing="10.0">
             <!-- Card de Exercício 1 -->
             <HBox spacing="10.0" style="-fx-background-color: #FFF; -fx-padding: 10px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, gray, 5, 0, 2, 2);">
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="133.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/exercicio2.jpg" />
+               </image></ImageView>
 
 
                 <VBox alignment="CENTER_LEFT">
