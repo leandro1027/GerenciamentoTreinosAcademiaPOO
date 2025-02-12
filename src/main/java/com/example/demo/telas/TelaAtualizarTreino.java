@@ -14,7 +14,7 @@ public class TelaAtualizarTreino {
     }
 
     public void abrir(){
-        abridorJanela.abrirNovaJanela("/views/aluno/tela-atualizar-aluno-view.fxml", "Atualizar Treinos", 300, 300);
+        abridorJanela.abrirNovaJanela("/views/treino/tela-atualizar-aluno-view.fxml", "Atualizar Treinos", 300, 300);
     }
 
     public FXMLLoader getXMLLoader(){

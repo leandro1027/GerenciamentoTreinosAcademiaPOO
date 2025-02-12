@@ -14,7 +14,7 @@ public class TelaTreinos {
     }
 
     public void abrir(){
-        abridorJanela.abrirNovaJanela("/views/aluno/tela-alunos-view.fxml", "Treinos", 700, 500);
+        abridorJanela.abrirNovaJanela("/views/treino/adicionar-treino-view.fxml", "Treinos", 700, 500);
     }
 
     public FXMLLoader getXMLLoader(){
