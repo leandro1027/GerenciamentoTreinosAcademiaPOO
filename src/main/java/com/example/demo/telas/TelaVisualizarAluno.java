@@ -14,7 +14,7 @@ public class TelaVisualizarAluno {
     }
 
     public void abrir(){
-        abridorJanela.abrirNovaJanela("/views/aluno/tela-visualizar-aluno-view.fxml", "Visualizar Treino", 300, 200);
+        abridorJanela.abrirNovaJanela("/views/treino/tela-visualizar-aluno-view.fxml", "Visualizar Treino", 300, 200);
     }
 
     public FXMLLoader getXMLLoader(){

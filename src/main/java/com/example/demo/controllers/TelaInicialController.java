@@ -2,17 +2,18 @@ package com.example.demo.controllers;
 
 import com.example.demo.telas.TelaTreinos;
 import javafx.fxml.FXML;
+import com.example.demo.telas.TelaAdicionarTreino;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class TelaInicialController {
 
     private TelaTreinos telaTreinos;
-    private TelaTreinos telaAdicionarTreino;
+    private TelaAdicionarTreino telaAdicionarTreino;
     private TelaTreinos telaAtualizarTreino;
     private TelaTreinos telaVisualizarTreino;
 
-    public TelaInicialController(TelaTreinos telaTreinos, TelaTreinos telaAdicionarTreino,
+    public TelaInicialController(TelaTreinos telaTreinos, TelaAdicionarTreino telaAdicionarTreino,
                                  TelaTreinos telaAtualizarTreino, TelaTreinos telaVisualizarTreino) {
         this.telaTreinos = telaTreinos;
         this.telaAdicionarTreino = telaAdicionarTreino;
@@ -40,7 +41,5 @@ public class TelaInicialController {
     protected void onEditarTreinoButtonClick(){
         telaVisualizarTreino.abrir();
     }
-
-
 
 }
