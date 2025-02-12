@@ -20,9 +20,9 @@
 
     <VBox alignment="CENTER" layoutX="10.0" layoutY="50.0" prefHeight="300.0" prefWidth="271.0" spacing="15.0">
         <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Academia" />
+        <Button onAction="#onNovoTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Registrar dados do treino" />
 
         <Button onAction="#onAbrirTreinosButtonClick" prefHeight="35.0" prefWidth="200.0" text="Visualizar dados do treino" />
-        <Button onAction="#onNovoTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Registrar dados do treino" />
         <Button onAction="#onEditarTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Editar dados do treino" />
         <Button onAction="#onExcluirTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Excluir treino" />
     </VBox>
