@@ -6,8 +6,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.treino.TelaAdicionarTreinoController">
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.treino.TelaAdicionarTreinoController">
 
+    <MenuBar layoutY="0.0" prefHeight="25.0" prefWidth="300.0">
+        <Menu text="Treinos">
+            <MenuItem onAction="#onNovoTreinoButtonClick" text="Registrar dados do treino" />
+            <MenuItem onAction="#onAbrirTreinosButtonClick" text="Visualizar dados do treino" />
+            <MenuItem onAction="#onEditarTreinoButtonClick" text="Editar dados do treino" />
+            <MenuItem onAction="#onExcluirTreinoButtonClick" text="Excluir treino" />
+        </Menu>
+        <Menu text="Frequência">
+            <MenuItem text="Registrar frequência" />
+            <MenuItem text="Visualizar frequência" />
+        </Menu>
+    </MenuBar>
 
 </AnchorPane>

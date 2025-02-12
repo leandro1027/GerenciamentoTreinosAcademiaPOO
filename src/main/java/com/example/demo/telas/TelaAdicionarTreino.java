@@ -14,7 +14,7 @@ public class TelaAdicionarTreino{
     }
 
     public void abrir(){
-        abridorJanela.abrirNovaJanela("/views/treino/adicionar-treino-view.fxml", "Adicionar Treino", 300, 300);
+        abridorJanela.abrirNovaJanela("/views/treino/adicionar-treino-view.fxml", "Adicionar Treino", 300, 400);
     }
 
     public FXMLLoader getXMLLoader(){
