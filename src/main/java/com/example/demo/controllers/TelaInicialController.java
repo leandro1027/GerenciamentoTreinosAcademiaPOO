@@ -13,8 +13,8 @@ public class TelaInicialController {
     private TelaTreinos telaAtualizarTreino;
     private TelaTreinos telaVisualizarTreino;
 
-    public TelaInicialController(TelaTreinos telaTreinos, TelaAdicionarTreino telaAdicionarTreino,
-                                 TelaTreinos telaAtualizarTreino, TelaTreinos telaVisualizarTreino) {
+    public TelaInicialController(TelaTreinos telaTreinos, TelaAdicionarTreino telaAdicionarTreino, TelaTreinos telaAtualizarTreino, TelaTreinos telaVisualizarTreino) {
+
         this.telaTreinos = telaTreinos;
         this.telaAdicionarTreino = telaAdicionarTreino;
         this.telaAtualizarTreino = telaAtualizarTreino;

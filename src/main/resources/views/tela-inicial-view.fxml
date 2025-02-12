@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="351.0" prefWidth="252.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.TelaInicialController">
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.TelaInicialController">
 
     <MenuBar layoutY="0.0" prefHeight="25.0" prefWidth="300.0">
         <Menu text="Treinos">
@@ -18,13 +18,13 @@
         </Menu>
     </MenuBar>
 
-    <VBox alignment="CENTER" layoutX="0.0" layoutY="25.0" prefHeight="250.0" prefWidth="300.0" spacing="10.0">
-        <Label style="-fx-font-size: 20px;" text="Academia" />
+    <VBox alignment="CENTER" layoutX="25.0" layoutY="50.0" prefHeight="300.0" prefWidth="250.0" spacing="15.0">
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Academia" />
 
-        <Button onAction="#onAbrirTreinosButtonClick" prefHeight="25.0" prefWidth="174.0" text="Visualizar dados do treino" />
-        <Button onAction="#onNovoTreinoButtonClick" prefHeight="25.0" prefWidth="174.0" text="Registrar dados do treino" />
-        <Button onAction="#onEditarTreinoButtonClick" prefHeight="25.0" prefWidth="174.0" text="Editar dados do treino" />
-        <Button onAction="#onExcluirTreinoButtonClick" prefHeight="25.0" prefWidth="174.0" text="Excluir treino" />
+        <Button onAction="#onAbrirTreinosButtonClick" prefHeight="35.0" prefWidth="200.0" text="Visualizar dados do treino" />
+        <Button onAction="#onNovoTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Registrar dados do treino" />
+        <Button onAction="#onEditarTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Editar dados do treino" />
+        <Button onAction="#onExcluirTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Excluir treino" />
     </VBox>
 
 </AnchorPane>
