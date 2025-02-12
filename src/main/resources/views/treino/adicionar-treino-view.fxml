@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.treino.TelaAdicionarTreinoController">
+<AnchorPane prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.treino.TelaAdicionarTreinoController">
 
-    <MenuBar layoutY="0.0" prefHeight="25.0" prefWidth="300.0">
+    <!-- Barra de Menu -->
+    <MenuBar layoutY="0.0" prefHeight="25.0" prefWidth="350.0">
         <Menu text="Treinos">
             <MenuItem onAction="#onNovoTreinoButtonClick" text="Registrar dados do treino" />
             <MenuItem onAction="#onAbrirTreinosButtonClick" text="Visualizar dados do treino" />
@@ -17,6 +19,43 @@
             <MenuItem text="Visualizar frequência" />
         </Menu>
     </MenuBar>
-   <VBox layoutX="53.0" layoutY="57.0" prefHeight="200.0" prefWidth="190.0" />
 
+    <!-- Conteúdo Principal -->
+    <VBox layoutY="25.0" spacing="10.0" style="-fx-padding: 10px;">
+        <!-- Título -->
+        <Label text="Nome do treino:" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <!-- Lista de Exercícios -->
+        <VBox spacing="10.0">
+            <!-- Card de Exercício 1 -->
+            <HBox spacing="10.0" style="-fx-background-color: #FFF; -fx-padding: 10px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, gray, 5, 0, 2, 2);">
+
+                <VBox alignment="CENTER_LEFT">
+                    <Label text="Supino Inclinado" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                    <Label text="3x de 10" />
+                    <Label text="Intervalo" />
+                    <Label text="Carga" />
+                </VBox>
+            </HBox>
+
+            <!-- Card de Exercício 2 -->
+            <HBox spacing="10.0" style="-fx-background-color: #FFF; -fx-padding: 10px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, gray, 5, 0, 2, 2);">
+                <VBox alignment="CENTER_LEFT">
+                    <Label text="Supino Inclinado" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                    <Label text="3x de 10" />
+                    <Label text="Intervalo" />
+                    <Label text="Carga" />
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <!-- Botão de Adicionar Exercício -->
+        <Button text="Adicionar exercício" style="-fx-font-size: 14px; -fx-background-color: #FFF; -fx-border-color: #CCC; -fx-border-radius: 10px; -fx-background-radius: 10px;" />
+
+        <!-- Botões Salvar e Cancelar -->
+        <HBox alignment="CENTER" spacing="20.0" style="-fx-padding: 20px;">
+            <Button text="Salvar" style="-fx-background-color: #FFD700; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 10px;" />
+            <Button text="Cancelar" style="-fx-background-color: #FF6347; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10px;" />
+        </HBox>
+    </VBox>
 </AnchorPane>
