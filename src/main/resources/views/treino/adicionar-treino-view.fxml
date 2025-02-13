@@ -10,7 +10,7 @@
     <MenuBar layoutY="0.0" prefHeight="25.0" prefWidth="350.0">
         <Menu text="Treinos">
             <MenuItem onAction="#onNovoTreinoButtonClick" text="Registrar dados do treino" />
-            <MenuItem onAction="#onAbrirTreinosButtonClick" text="Visualizar dados do treino" />
+            <MenuItem onAction="#onVisualizarTreinoButtonClick" text="Visualizar dados do treino" />
             <MenuItem onAction="#onEditarTreinoButtonClick" text="Editar dados do treino" />
             <MenuItem onAction="#onExcluirTreinoButtonClick" text="Excluir treino" />
         </Menu>
