@@ -45,6 +45,7 @@
         <!-- Imagem do treino -->
         <ImageView fx:id="treinoImagemView" fitHeight="150.0" fitWidth="150.0" preserveRatio="true" style="-fx-padding: 10px;" />
 
-        <Label fx:id="mensagemLabel" style="-fx-text-fill: red;" />
+        <Label fx:id="mensagemLabel" style="-fx-text-fill: red; -fx-font-weight: bold; -fx-padding: 10px;" />
+
     </VBox>
 </AnchorPane>

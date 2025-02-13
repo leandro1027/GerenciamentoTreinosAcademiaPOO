@@ -1,6 +1,5 @@
 package com.example.demo.controllers.treino;
 
-import com.example.demo.entities.Aluno;
 import com.example.demo.entities.Treino;
 import com.example.demo.repositories.AlunoRepository;
 import com.example.demo.repositories.TreinoRepository;
@@ -90,26 +89,7 @@ public class TelaPreencherTreinoController {
         }
     }
 
-    @FXML
-    protected void onSalvarButtonClick(){
-        try {
-            String treinoSelecionado = treinoComboBox.getSelectionModel().getSelectedItem();
-            String repeticoes = repeticoesTextField.getText();
-            String carga = cargaTextField.getText();
 
-            Treino novoTreino = new Treino();
-            novoTreino.setNome(treinoSelecionado);
-            novoTreino.setRepeticao(repeticoes);
-            novoTreino.setCarga(carga);
-            novoTreino.setDatatreino(new Date());
-
-            telaAlunosController.adicionarAluno(aluno);
-
-            fechaJanela();
-        } catch (Exception e) {
-            System.out.println("Você preencheu algum campo incorretamente!");
-        }
-    }
 
 
     // Inicialização do controlador
