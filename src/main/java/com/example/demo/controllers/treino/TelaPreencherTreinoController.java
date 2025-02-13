@@ -25,13 +25,10 @@ public class TelaPreencherTreinoController {
     @FXML
     private Label mensagemLabel;
 
-
     private TreinoRepository treinoRepository;
 
-    private TelaPreencherTreino telaPreencherTreino;
 
     public TelaPreencherTreinoController(TelaPreencherTreino telaPreencherTreino, TreinoRepository treinoRepository) {
-        this.telaPreencherTreino = telaPreencherTreino;
         this.treinoRepository = treinoRepository;
     }
 
@@ -41,13 +38,19 @@ public class TelaPreencherTreinoController {
 
     @FXML
     protected void onSalvarButtonClick() {
-        Treino treino = new Treino();
-        treino.setRepeticao(repeticoesTextField.getText());
-        treino.setCarga(cargaTextField.getText());
-        treinoRepository.save(treino);
+        try {
+            Treino treino = new Treino();
+            treino.setRepeticao(repeticoesTextField.getText());
+            treino.setCarga(cargaTextField.getText());
+            treinoRepository.save(treino);
 
-        repeticoesTextField.clear();
-        cargaTextField.clear();
-        mensagemLabel.setText("Treino salvo com sucesso!");
+            repeticoesTextField.clear();
+            cargaTextField.clear();
+            mensagemLabel.setText("Treino salvo com sucesso!");
+        } catch (Exception e) {
+            mensagemLabel.setText("Erro ao salvar o treino: " + e.getMessage());
+        }
     }
+
 }
+

@@ -42,5 +42,6 @@
             <Button style="-fx-background-color: #FFD700; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 10px;" text="Salvar" onAction="#onSalvarButtonClick"/>
             <Button style="-fx-background-color: #FF6347; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10px;" text="Cancelar" onAction="#Cancelar" />
         </HBox>
+        <Label fx:id="mensagemLabel" />
     </VBox>
 </AnchorPane>
