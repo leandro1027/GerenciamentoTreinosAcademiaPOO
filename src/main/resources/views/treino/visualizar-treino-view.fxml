@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo.controllers.treino.TelaVisualizarTreinoController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- Título -->
+    <VBox alignment="CENTER" layoutX="25.0" layoutY="20.0" spacing="10">
+        <Label text="Visualizar Treino" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+    </VBox>
+
+    <!-- Informações do Treino -->
+    <VBox layoutX="30.0" layoutY="80.0" spacing="10">
+
+        <HBox spacing="10">
+            <Label text="Nome:" style="-fx-font-weight: bold;" />
+            <Label fx:id="labelNome" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Carga:" style="-fx-font-weight: bold;" />
+            <Label fx:id="labelCarga" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Repetições:" style="-fx-font-weight: bold;" />
+            <Label fx:id="labelRepeticoes" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Data:" style="-fx-font-weight: bold;" />
+            <Label fx:id="labelDataTreino" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Descrição:" style="-fx-font-weight: bold;" />
+            <Label fx:id="labelDescricao" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Duração:" style="-fx-font-weight: bold;" />
+            <Label fx:id="labelDuracao" />
+        </HBox>
+    </VBox>
+
+    <!-- Botão de Fechar -->
+    <VBox alignment="CENTER" layoutX="30.0" layoutY="320.0">
+        <Button onAction="#onFecharButtonClick" text="Fechar" style="-fx-background-color: #FF6347; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10px;" />
+    </VBox>
+</AnchorPane>
+
