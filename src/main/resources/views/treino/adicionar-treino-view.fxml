@@ -51,7 +51,7 @@
                         <Image url="/images/exercicio2.jpg" />
                     </image></ImageView>
                 <VBox alignment="CENTER_LEFT">
-                    <Label style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Supino Inclinado" />
+                    <Label style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Leg Press 45º" />
                     <Label text="3x de 10" />
                     <Label text="Intervalo" />
                     <Label text="Carga" />

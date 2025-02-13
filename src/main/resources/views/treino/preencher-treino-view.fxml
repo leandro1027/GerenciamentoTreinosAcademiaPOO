@@ -21,7 +21,7 @@
         <Label prefHeight="27.0" prefWidth="200.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-alignment: center;" text="Preencher Treino" />
 
         <Label text="Selecionar Treino:" />
-        <ComboBox fx:id="treinoComboBox" prefWidth="150.0" onAction="#onTreinoSelecionado"/>
+        <ComboBox fx:id="treinoComboBox" onAction="#onTreinoSelecionado" prefWidth="150.0" />
 
         <HBox alignment="CENTER" spacing="10">
             <Label text="Repetições:" />
@@ -35,14 +35,15 @@
         <!-- Descrição do treino -->
         <Label fx:id="treinoDescricaoLabel" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10px;" />
 
-        <!-- Imagem do treino -->
-        <ImageView fx:id="treinoImagemView" fitWidth="150.0" fitHeight="150.0" preserveRatio="true" style="-fx-padding: 10px;" />
-
         <!-- Botões Salvar e Cancelar -->
         <HBox alignment="CENTER" spacing="20.0" style="-fx-padding: 15px;">
             <Button onAction="#onSalvarButtonClick" style="-fx-background-color: #FFD700; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 10px;" text="Salvar" />
+
             <Button onAction="#Cancelar" style="-fx-background-color: #FF6347; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10px;" text="Cancelar" />
         </HBox>
+
+        <!-- Imagem do treino -->
+        <ImageView fx:id="treinoImagemView" fitHeight="150.0" fitWidth="150.0" preserveRatio="true" style="-fx-padding: 10px;" />
 
         <Label fx:id="mensagemLabel" style="-fx-text-fill: red;" />
     </VBox>

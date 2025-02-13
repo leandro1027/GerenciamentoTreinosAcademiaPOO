@@ -12,9 +12,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -36,14 +38,18 @@ public class TelaPreencherTreinoController {
     @FXML
     private ComboBox<String> comboBoxTreinos;
 
+    @Autowired
     private TreinoRepository treinoRepository;
 
     private TelaAdicionarTreinoController telaAdicionarTreinoController;
 
-    public TelaPreencherTreinoController(TelaPreencherTreino telaPreencherTreino, TelaAdicionarTreinoController telaAdicionarTreinoController, TreinoRepository treinoRepository) {
+    public TelaPreencherTreinoController(TelaPreencherTreino telaPreencherTreino,
+                                         TelaAdicionarTreinoController telaAdicionarTreinoController,
+                                         TreinoRepository treinoRepository) {
         this.treinoRepository = treinoRepository;
         this.telaAdicionarTreinoController = telaAdicionarTreinoController;
     }
+
 
     // Carrega os treinos no ComboBox
     private void carregarTreinos() {
@@ -60,7 +66,6 @@ public class TelaPreencherTreinoController {
     public void Cancelar(ActionEvent actionEvent) {
     }
 
-    // Ação ao salvar o treino
     @FXML
     private void onSalvarButtonClick() {
         String treinoSelecionado = treinoComboBox.getSelectionModel().getSelectedItem();
@@ -70,19 +75,28 @@ public class TelaPreencherTreinoController {
         if (treinoSelecionado == null || repeticoes.isEmpty() || carga.isEmpty()) {
             mensagemLabel.setText("Preencha todos os campos!");
         } else {
+            // Criando um novo objeto Treino para salvar no banco
+            Treino novoTreino = new Treino();
+            novoTreino.setNome(treinoSelecionado);
+            novoTreino.setRepeticao(repeticoes);
+            novoTreino.setCarga(carga);
+            novoTreino.setDatatreino(new Date()); // Define a data do treino como a data atual
+
+            // Salvando no banco de dados
+            treinoRepository.save(novoTreino);
+
             mensagemLabel.setText("Treino salvo com sucesso!");
-            // Aqui você pode adicionar a lógica para salvar os dados no banco ou em uma lista
         }
     }
+
 
     // Inicialização do controlador
     @FXML
     public void initialize() {
         carregarTreinos();  // Carregar os treinos ao inicializar
         treinoComboBox.getItems().addAll(
-                "Treino A - Peito e Tríceps",
-                "Treino B - Costas e Bíceps",
-                "Treino C - Pernas e Ombros"
+                "Supino inclinado",
+                "Leg Press 45º"
         );
     }
 
