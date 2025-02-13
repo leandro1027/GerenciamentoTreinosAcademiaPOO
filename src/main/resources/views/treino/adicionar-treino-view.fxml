@@ -23,7 +23,7 @@
     <!-- Conteúdo Principal -->
     <VBox layoutY="25.0" spacing="10.0" style="-fx-padding: 10px;">
         <!-- Título -->
-        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Nome do treino:" />
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Treinos" />
 
         <!-- Lista de Exercícios -->
         <VBox spacing="10.0">
@@ -45,6 +45,11 @@
 
             <!-- Card de Exercício 2 -->
             <HBox spacing="10.0" style="-fx-background-color: #FFF; -fx-padding: 10px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, gray, 5, 0, 2, 2);">
+
+                <ImageView fitHeight="133.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/images/exercicio2.jpg" />
+                    </image></ImageView>
                 <VBox alignment="CENTER_LEFT">
                     <Label style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Supino Inclinado" />
                     <Label text="3x de 10" />
@@ -55,10 +60,11 @@
         </VBox>
 
         <!-- Botão de Adicionar Exercício -->
-        <Button style="-fx-font-size: 14px; -fx-background-color: #FFF; -fx-border-color: #CCC; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Adicionar exercício" />
-
+        <HBox alignment="CENTER" style="-fx-padding: 10px;">
+            <Button onAction="#onPreencherTreinoButtonClick" style="-fx-font-size: 14px; -fx-background-color: #FFF; -fx-border-color: #CCC; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Adicionar exercício" />
+        </HBox>
         <!-- Botões Salvar e Cancelar -->
-        <HBox alignment="CENTER" spacing="20.0" style="-fx-padding: 20px;">
+        <HBox alignment="CENTER" spacing="20.0" style="-fx-padding: 15px;">
             <Button style="-fx-background-color: #FFD700; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 10px;" text="Salvar" />
             <Button style="-fx-background-color: #FF6347; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10px;" text="Cancelar" />
         </HBox>
