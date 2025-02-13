@@ -27,9 +27,6 @@
             </image>
         </ImageView>
 
-
-
-
         <Button onAction="#onNovoTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Registrar dados do treino" />
         <Button onAction="#onAbrirTreinosButtonClick" prefHeight="35.0" prefWidth="200.0" text="Visualizar dados do treino" />
         <Button onAction="#onEditarTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Editar dados do treino" />
