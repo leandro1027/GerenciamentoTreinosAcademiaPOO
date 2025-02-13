@@ -66,4 +66,6 @@ public class TelaAdicionarTreinoController {
         // Adicione mais treinos aqui, se necessário
         return nomesTreinos;
     }
+
+    
 }
