@@ -32,7 +32,7 @@ public class  TelaEditarTreinoController {
 
 
             treinoService.editarTreino(treino);
-
+        showAlert("Sucesso", "Treino editado com sucesso!");
             // Fechar a tela de edição após salvar
             // Aqui você pode adicionar o código para fechar a janela
 

@@ -8,5 +8,6 @@
     <TextField fx:id="txtCarga" promptText="Carga (kg)"/>
     <TextField fx:id="txtRepeticoes" promptText="Repetições"/>
     <Button text="Salvar" onAction="#onSalvarButtonClick"/>
+
     <Button text="Cancelar" onAction="#onCancelarButtonClick"/>
 </VBox>
