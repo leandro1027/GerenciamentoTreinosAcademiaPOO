@@ -55,7 +55,6 @@ public class TelaVisualizarTreinoController {
         int selectedIndex = listViewTreinos.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
             Treino treinoSelecionado = listaTreinos.get(selectedIndex);
-            treinoService.editarTreino(treinoSelecionado.getId());
             System.out.println("Editar treino: " + treinoSelecionado.getNome());
             // Aqui você pode chamar outra tela para edição
         } else {

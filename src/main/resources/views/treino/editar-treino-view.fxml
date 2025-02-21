@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="views.treino.EditarTreinoView"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.controllers.treino.TelaEditarTreinoController">
+    <TextField fx:id="txtNome" promptText="Nome do Treino"/>
+    <TextField fx:id="txtCarga" promptText="Carga (kg)"/>
+    <TextField fx:id="txtRepeticoes" promptText="Repetições"/>
+    <Button text="Salvar" onAction="#onSalvarButtonClick"/>
+    <Button text="Cancelar" onAction="#onCancelarButtonClick"/>
+</VBox>
