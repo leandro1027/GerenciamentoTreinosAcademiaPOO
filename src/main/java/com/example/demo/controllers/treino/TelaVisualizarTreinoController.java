@@ -72,6 +72,7 @@ public class TelaVisualizarTreinoController {
             Treino treinoSelecionado = listaTreinos.get(selectedIndex);
             treinoService.excluirTreino(treinoSelecionado.getId());
             carregarTreinos(); // Atualizar a lista após exclusão
+            showAlertConfirma("Confirmação", "Você realmente quer excluir o treino?");
         } else {
             showAlert("Erro", "Selecione um treino para excluir.");
         }
@@ -79,6 +80,13 @@ public class TelaVisualizarTreinoController {
 
     private void showAlert(String titulo, String mensagem) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensagem);
+        alert.showAndWait();
+
+    } private void showAlertConfirma(String titulo, String mensagem) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(titulo);
         alert.setHeaderText(null);
         alert.setContentText(mensagem);
