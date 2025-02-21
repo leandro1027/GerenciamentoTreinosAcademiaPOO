@@ -10,11 +10,8 @@
         <Menu text="Treinos">
             <MenuItem onAction="#onNovoTreinoButtonClick" text="Registrar dados do treino" />
             <MenuItem onAction="#onVisualizarTreinoButtonClick" text="Visualizar dados do treino" />
-            <MenuItem onAction="#onEditarTreinoButtonClick" text="Editar dados do treino" />
-            <MenuItem onAction="#onExcluirTreinoButtonClick" text="Excluir treino" />
         </Menu>
         <Menu text="Frequência">
-            <MenuItem text="Registrar frequência" />
             <MenuItem text="Visualizar frequência" />
         </Menu>
     </MenuBar>
@@ -29,8 +26,7 @@
 
         <Button onAction="#onNovoTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Registrar dados do treino" />
         <Button onAction="#onVisualizarTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Visualizar dados do treino" />
-        <Button onAction="#onEditarTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Editar dados do treino" />
-        <Button onAction="#onExcluirTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Excluir treino" />
+
     </VBox>
 
 </AnchorPane>
