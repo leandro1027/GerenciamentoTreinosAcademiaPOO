@@ -2,6 +2,7 @@ package com.example.demo.controllers.treino;
 
 import com.example.demo.entities.Treino;
 import com.example.demo.services.TreinoService;
+import com.example.demo.telas.TelaEditarTreino;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -25,6 +26,8 @@ public class TelaVisualizarTreinoController {
     private TreinoService treinoService;
 
     private List<Treino> listaTreinos; // Guardar os treinos carregados
+    @Autowired
+    private TelaEditarTreino telaEditarTreino;
 
     @FXML
     public void initialize() {
@@ -52,11 +55,11 @@ public class TelaVisualizarTreinoController {
 
     @FXML
     private void onEditarButtonClick() {
+        telaEditarTreino.abrir();
         int selectedIndex = listViewTreinos.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
             Treino treinoSelecionado = listaTreinos.get(selectedIndex);
             System.out.println("Editar treino: " + treinoSelecionado.getNome());
-            // Aqui você pode chamar outra tela para edição
         } else {
             showAlert("Erro", "Selecione um treino para editar.");
         }

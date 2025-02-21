@@ -13,7 +13,7 @@ public class TelaEditarTreino {
     }
 
     public void abrir(){
-        abridorJanela.abrirNovaJanela("/views/treino/tela-editar-treino-view.fxml", "editar Treinos", 300, 300);
+        abridorJanela.abrirNovaJanela("/views/treino/editar-treino-view.fxml", "editar Treinos", 300, 300);
     }
 
     public FXMLLoader getXMLLoader(){

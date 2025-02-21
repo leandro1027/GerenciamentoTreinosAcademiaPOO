@@ -5,13 +5,11 @@ import com.example.demo.services.TreinoService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class TelaEditarTreinoController {
 
     @FXML
     private TextField txtNome, txtCarga, txtRepeticoes;
-
 
     private TreinoService treinoService;
 
@@ -32,7 +30,7 @@ public class TelaEditarTreinoController {
             treino.setCarga(txtCarga.getText());
             treino.setRepeticao(txtRepeticoes.getText());
 
-            // Salvar no banco de dados
+
             treinoService.editarTreino(treino);
 
             // Fechar a tela de edição após salvar
