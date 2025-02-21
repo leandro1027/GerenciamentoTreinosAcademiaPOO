@@ -7,6 +7,7 @@ import com.example.demo.telas.TelaAdicionarTreino;
 import com.example.demo.telas.TelaPreencherTreino;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -14,8 +15,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -42,6 +41,8 @@ public class TelaPreencherTreinoController {
     private TreinoRepository treinoRepository;
 
     private TelaAdicionarTreinoController telaAdicionarTreinoController;
+    @Autowired
+    private TelaPreencherTreino telaPreencherTreino;
 
     public TelaPreencherTreinoController(TelaPreencherTreino telaPreencherTreino,
                                          TelaAdicionarTreinoController telaAdicionarTreinoController,
@@ -62,8 +63,8 @@ public class TelaPreencherTreinoController {
         }
     }
 
-    // Ação do botão Cancelar
     public void Cancelar(ActionEvent actionEvent) {
+
     }
 
     @FXML
@@ -80,9 +81,17 @@ public class TelaPreencherTreinoController {
             novoTreino.setRepeticao(repeticoes);
             novoTreino.setCarga(carga);
             novoTreino.setDatatreino(new Date());
-            mensagemLabel.setText("Treino salvo com sucesso!");
+            showAlert("Sucesso", "Exercicio salvo com sucesso!");
             treinoRepository.save(novoTreino);
         }
+    }
+
+    private void showAlert(String titulo, String mensagem) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensagem);
+        alert.showAndWait();
     }
 
     // Inicialização do controlador

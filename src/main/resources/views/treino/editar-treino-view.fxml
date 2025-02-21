@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.Button?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.controllers.treino.TelaEditarTreinoController">
-    <TextField fx:id="txtNome" promptText="Nome do Treino"/>
-    <TextField fx:id="txtCarga" promptText="Carga (kg)"/>
-    <TextField fx:id="txtRepeticoes" promptText="Repetições"/>
-    <Button text="Salvar" onAction="#onSalvarButtonClick"/>
-    <Button text="Cancelar" onAction="#onCancelarButtonClick"/>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="193.0" prefWidth="221.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.treino.TelaEditarTreinoController">
+    <TextField fx:id="txtCarga" promptText="Carga (kg)" />
+    <TextField fx:id="txtRepeticoes" promptText="Repetições" />
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+          <Button onAction="#onSalvarButtonClick" text="Salvar" />
+          <Button onAction="#onCancelarButtonClick" text="Cancelar" />
+      </children>
+   </HBox>
 </VBox>

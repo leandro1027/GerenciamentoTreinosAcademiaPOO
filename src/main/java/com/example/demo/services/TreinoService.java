@@ -26,4 +26,5 @@ public class TreinoService {
     public void editarTreino(Treino treinoAtualizado) {
         treinoRepository.save(treinoAtualizado);
     }
+
 }

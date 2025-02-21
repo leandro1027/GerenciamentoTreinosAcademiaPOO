@@ -20,6 +20,8 @@ public class TelaAdicionarTreinoController {
     private TelaAdicionarTreino telaAdicionarTreino;
     private TelaTreinos telaAtualizarTreino;
 
+
+
     public TelaAdicionarTreinoController(TelaPreencherTreino telaPreencherTreino, TelaTreinos telaTreinos, TelaAdicionarTreino telaAdicionarTreino, TelaTreinos telaAtualizarTreino, TelaVisualizarTreino telaVisualizarTreino) {
         this.telaPreencherTreino = telaPreencherTreino;
         this.telaTreinos = telaTreinos;
@@ -30,6 +32,9 @@ public class TelaAdicionarTreinoController {
 
     @FXML
     protected void onPreencherTreinoButtonClick(){telaPreencherTreino.abrir();}
+
+    @FXML protected void onCancelarButtonClick(){telaTreinos.abrir();}
+
 
     @FXML
     protected void onAbrirTreinosButtonClick() {
@@ -69,9 +74,8 @@ public class TelaAdicionarTreinoController {
         if (nomeTreino2 != null && !nomeTreino2.getText().isEmpty()) {
             nomesTreinos.add(nomeTreino2.getText());
         }
-        // Adicione mais treinos aqui, se necessário
+        // Adicionar mais treinos aqui
         return nomesTreinos;
     }
 
-    
 }

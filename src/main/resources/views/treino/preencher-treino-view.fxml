@@ -11,8 +11,6 @@
         <Menu text="Treinos">
             <MenuItem text="Registrar dados do treino" />
             <MenuItem text="Visualizar dados do treino" />
-            <MenuItem text="Editar dados do treino" />
-            <MenuItem text="Excluir treino" />
         </Menu>
     </MenuBar>
 
