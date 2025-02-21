@@ -1,46 +1,85 @@
 package com.example.demo.controllers.treino;
 
 import com.example.demo.entities.Treino;
+import com.example.demo.services.TreinoService;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
+import javafx.scene.control.Alert;
 import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 @Controller
 public class TelaVisualizarTreinoController {
 
+    @FXML
+    private ListView<String> listViewTreinos;
 
     @FXML
-    private Label labelNome;
+    private Button btnEditar, btnExcluir, btnFechar;
+
+    @Autowired
+    private TreinoService treinoService;
+
+    private List<Treino> listaTreinos; // Guardar os treinos carregados
 
     @FXML
-    private Label labelCarga;
-
-    @FXML
-    private Label labelRepeticoes;
-
-    @FXML
-    private Label labelDataTreino;
-
-    @FXML
-    private Label labelDescricao;
-
-    @FXML
-    private Label labelDuracao;
-
-    // Método para definir o treino e preencher as informações na tela
-    public void setTreino(Treino treino) {
-        labelNome.setText(treino.getNome());
-        labelCarga.setText(treino.getCarga());
-        labelRepeticoes.setText(treino.getRepeticao());
-        labelDataTreino.setText(treino.getDatatreino().toString());
-        labelDescricao.setText(treino.getDescricao());
-        labelDuracao.setText(treino.getDuracao() + " minutos");
+    public void initialize() {
+        carregarTreinos();
+        listViewTreinos.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
-    // Ação do botão Fechar
+    private void carregarTreinos() {
+        listaTreinos = treinoService.listarTodos();
+        listViewTreinos.getItems().clear();
+
+        for (Treino treino : listaTreinos) {
+            String nome = (treino.getNome() != null) ? treino.getNome() : "Sem nome";
+            String carga = (treino.getCarga() != null) ? treino.getCarga() + "kg" : "0kg";
+            String repeticoes = (treino.getRepeticao() != null) ? treino.getRepeticao() + " reps" : "0 reps";
+
+            listViewTreinos.getItems().add(nome + " - " + carga + ", " + repeticoes);
+        }
+    }
+
     @FXML
     private void onFecharButtonClick() {
-        labelNome.getScene().getWindow().hide();
+        listViewTreinos.getScene().getWindow().hide();
+    }
+
+    @FXML
+    private void onEditarButtonClick() {
+        int selectedIndex = listViewTreinos.getSelectionModel().getSelectedIndex();
+        if (selectedIndex >= 0) {
+            Treino treinoSelecionado = listaTreinos.get(selectedIndex);
+            treinoService.editarTreino(treinoSelecionado.getId());
+            System.out.println("Editar treino: " + treinoSelecionado.getNome());
+            // Aqui você pode chamar outra tela para edição
+        } else {
+            showAlert("Erro", "Selecione um treino para editar.");
+        }
+    }
+
+    @FXML
+    private void onExcluirButtonClick() {
+        int selectedIndex = listViewTreinos.getSelectionModel().getSelectedIndex();
+        if (selectedIndex >= 0) {
+            Treino treinoSelecionado = listaTreinos.get(selectedIndex);
+            treinoService.excluirTreino(treinoSelecionado.getId());
+            carregarTreinos(); // Atualizar a lista após exclusão
+        } else {
+            showAlert("Erro", "Selecione um treino para excluir.");
+        }
+    }
+
+    private void showAlert(String titulo, String mensagem) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensagem);
+        alert.showAndWait();
     }
 }
-
