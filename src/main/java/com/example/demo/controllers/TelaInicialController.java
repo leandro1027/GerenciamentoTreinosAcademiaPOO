@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.telas.TelaTreinos;
 import com.example.demo.telas.TelaVisualizarTreino;
+import com.example.demo.telas.frequencia.TelaVisualizarFrequencia;
 import javafx.fxml.FXML;
 import com.example.demo.telas.TelaAdicionarTreino;
 import org.springframework.stereotype.Controller;
@@ -13,14 +14,21 @@ public class TelaInicialController {
     private TelaAdicionarTreino telaAdicionarTreino;
     private TelaTreinos telaAtualizarTreino;
     private TelaVisualizarTreino telaVisualizarTreino;
+    private TelaVisualizarFrequencia telaVisualizarFrequencia;
 
-    public TelaInicialController(TelaTreinos telaTreinos, TelaAdicionarTreino telaAdicionarTreino, TelaTreinos telaAtualizarTreino, TelaVisualizarTreino telaVisualizarTreino) {
+    public TelaInicialController(TelaVisualizarFrequencia telaVisualizarFrequencia, TelaTreinos telaTreinos, TelaAdicionarTreino telaAdicionarTreino, TelaTreinos telaAtualizarTreino, TelaVisualizarTreino telaVisualizarTreino) {
 
+        this.telaVisualizarFrequencia = telaVisualizarFrequencia;
         this.telaTreinos = telaTreinos;
         this.telaAdicionarTreino = telaAdicionarTreino;
         this.telaAtualizarTreino = telaAtualizarTreino;
         this.telaVisualizarTreino = telaVisualizarTreino;
 
+    }
+
+    @FXML
+    protected void onAbrirFrequenciaButtonClick() {
+        telaVisualizarFrequencia.abrir();
     }
 
     @FXML

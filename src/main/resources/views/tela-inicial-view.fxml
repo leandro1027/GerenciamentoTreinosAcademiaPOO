@@ -12,7 +12,10 @@
             <MenuItem onAction="#onVisualizarTreinoButtonClick" text="Visualizar dados dos treinos" />
         </Menu>
         <Menu text="Frequência">
-            <MenuItem text="Visualizar frequência" />
+            <MenuItem onAction="#onAbrirFrequenciaButtonClick" text="Visualizar frequência" />
+        </Menu>
+        <Menu text="Avaliação">
+            <MenuItem text="Visualizar avaliação" />
         </Menu>
     </MenuBar>
 
