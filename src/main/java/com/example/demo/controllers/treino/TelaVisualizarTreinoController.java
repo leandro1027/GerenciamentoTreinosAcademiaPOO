@@ -8,6 +8,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.Alert;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -55,14 +57,15 @@ public class TelaVisualizarTreinoController {
 
     @FXML
     private void onEditarButtonClick() {
-        telaEditarTreino.abrir();
         int selectedIndex = listViewTreinos.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
             Treino treinoSelecionado = listaTreinos.get(selectedIndex);
+            telaEditarTreino.setSelectedTreino(treinoSelecionado);
             System.out.println("Editar treino: " + treinoSelecionado.getNome());
         } else {
             showAlert("Erro", "Selecione um treino para editar.");
         }
+        telaEditarTreino.abrir();
     }
 
     @FXML
