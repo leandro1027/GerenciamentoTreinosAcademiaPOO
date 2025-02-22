@@ -15,7 +15,7 @@
             <MenuItem onAction="#onAbrirFrequenciaButtonClick" text="Visualizar frequência" />
         </Menu>
         <Menu text="Avaliação">
-            <MenuItem text="Visualizar avaliação" />
+            <MenuItem onAction="#onAbrirAvaliacaoButtonClick" text="Visualizar avaliação" />
         </Menu>
     </MenuBar>
 
@@ -27,8 +27,11 @@
             </image>
         </ImageView>
 
+
         <Button onAction="#onNovoTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Registrar dados do treino" />
         <Button onAction="#onVisualizarTreinoButtonClick" prefHeight="35.0" prefWidth="200.0" text="Visualizar dados do treino" />
+        <Button onAction="#onAbrirAvaliacaoButtonClick"  prefHeight="35.0" prefWidth="200.0" text="Visualizar avaliação" />
+        <Button onAction="#onAbrirFrequenciaButtonClick"  prefHeight="35.0" prefWidth="200.0" text="Visualizar frequencia" />
 
     </VBox>
 

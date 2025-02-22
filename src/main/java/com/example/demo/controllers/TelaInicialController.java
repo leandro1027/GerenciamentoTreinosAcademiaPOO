@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.telas.TelaTreinos;
 import com.example.demo.telas.TelaVisualizarTreino;
+import com.example.demo.telas.avaliacao.TelaVisualizarAvaliacao;
 import com.example.demo.telas.frequencia.TelaVisualizarFrequencia;
 import javafx.fxml.FXML;
 import com.example.demo.telas.TelaAdicionarTreino;
@@ -15,15 +16,22 @@ public class TelaInicialController {
     private TelaTreinos telaAtualizarTreino;
     private TelaVisualizarTreino telaVisualizarTreino;
     private TelaVisualizarFrequencia telaVisualizarFrequencia;
+    private TelaVisualizarAvaliacao telaVisualizarAvaliacao;
 
-    public TelaInicialController(TelaVisualizarFrequencia telaVisualizarFrequencia, TelaTreinos telaTreinos, TelaAdicionarTreino telaAdicionarTreino, TelaTreinos telaAtualizarTreino, TelaVisualizarTreino telaVisualizarTreino) {
+    public TelaInicialController(TelaVisualizarAvaliacao telaVisualizarAvaliacao, TelaVisualizarFrequencia telaVisualizarFrequencia, TelaTreinos telaTreinos, TelaAdicionarTreino telaAdicionarTreino, TelaTreinos telaAtualizarTreino, TelaVisualizarTreino telaVisualizarTreino) {
 
+        this.telaVisualizarAvaliacao = telaVisualizarAvaliacao;
         this.telaVisualizarFrequencia = telaVisualizarFrequencia;
         this.telaTreinos = telaTreinos;
         this.telaAdicionarTreino = telaAdicionarTreino;
         this.telaAtualizarTreino = telaAtualizarTreino;
         this.telaVisualizarTreino = telaVisualizarTreino;
 
+    }
+
+    @FXML
+    protected void onAbrirAvaliacaoButtonClick() {
+        telaVisualizarAvaliacao.abrir();
     }
 
     @FXML
