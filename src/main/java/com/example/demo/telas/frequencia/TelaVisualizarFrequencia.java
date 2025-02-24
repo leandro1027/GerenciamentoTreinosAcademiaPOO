@@ -14,7 +14,7 @@ public class TelaVisualizarFrequencia {
     }
 
     public void abrir(){
-        abridorJanela.abrirNovaJanela("views/frequencia/visualizar-frequencia.fxml", "Visualizar frequência", 600, 350);
+        abridorJanela.abrirNovaJanela("/views/visualizar-frequencia-view.fxml", "Visualizar frequência", 600, 350);
     }
 
     public FXMLLoader getXMLLoader(){
