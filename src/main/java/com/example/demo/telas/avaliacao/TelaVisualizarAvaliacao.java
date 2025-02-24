@@ -14,7 +14,7 @@ public class TelaVisualizarAvaliacao {
     }
 
     public void abrir(){
-        abridorJanela.abrirNovaJanela("/views/visualizar-avaliacao-view.fxml", "Atualizar Treinos", 300, 300);
+        abridorJanela.abrirNovaJanela("/views/visualizar-avaliacao-view.fxml", "Atualizar Treinos", 350, 500);
     }
 
     public FXMLLoader getXMLLoader(){

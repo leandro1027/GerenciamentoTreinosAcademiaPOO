@@ -9,12 +9,10 @@ public class TelaVisualizarFrequencia {
 
     AbridorJanela abridorJanela;
 
-    public TelaVisualizarFrequencia(AbridorJanela abridorJanela) {
-        this.abridorJanela = abridorJanela;
-    }
+    public TelaVisualizarFrequencia(AbridorJanela abridorJanela) {this.abridorJanela = abridorJanela;}
 
     public void abrir(){
-        abridorJanela.abrirNovaJanela("/views/visualizar-frequencia-view.fxml", "Visualizar frequência", 600, 350);
+        abridorJanela.abrirNovaJanela("/views/visualizar-frequencia-view.fxml", "Visualizar frequência", 350, 500);
     }
 
     public FXMLLoader getXMLLoader(){
