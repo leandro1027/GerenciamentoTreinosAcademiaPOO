@@ -32,7 +32,7 @@ public class TelaVisualizarFrequenciaController {
         List<Frequencia> frequencias = frequenciaRepository.findAll();
 
         for (Frequencia frequencia : frequencias) {
-            String info = "ID: " + frequencia.getId() + ", Data: " + frequencia.getDatafrequencia();
+            String info =  "Data: " + frequencia.getDatafrequencia();
             listViewFrequencias.getItems().add(info);
         }
     }
